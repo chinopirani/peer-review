@@ -18,3 +18,8 @@ app.get('/login', (req,res)=>{
 app.get('/register', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
 });
+
+
+app.get('*', (req,res)=>{
+    res.send("la pagina que estas buscando, no se encuentra! ;(")
+});
